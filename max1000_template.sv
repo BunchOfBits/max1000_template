@@ -1,5 +1,5 @@
 module max1000_template (
-	// Main 12M clock
+	// Main 12MHz clock
 	input logic clk12m,
 
 	// Accelerometer
@@ -33,7 +33,29 @@ module max1000_template (
 	output logic        ram_ras,
 	output logic        ram_cas,
 	output logic        ram_we,
-	output logic        ram_cs
+	output logic        ram_cs,
+
+  // Flash
+  output logic        fls_cs,
+  output logic        fls_clk,
+  inout logic         fls_di_io0,
+  inout logic         fls_do_io1,
+  inout logic         fls_holdn_io3,
+  inout logic         fls_wpn_io2,
+
+  // JTAG
+  input  logic        jtag_tck,
+  output logic        jtag_tdo,
+  input  logic        jtag_tdi,
+  input  logic        jtag_tms,
+
+  // UART
+  input  logic        uart_txd,
+  output logic        uart_rxd,
+  input  logic        uart_rts,
+  output logic        uart_cts,
+  input  logic        uart_dtr,
+  output logic        uart_dsr
 );
 
 // This is the top module, enter your design here
