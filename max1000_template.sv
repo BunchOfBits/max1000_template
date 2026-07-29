@@ -35,27 +35,27 @@ module max1000_template (
 	output logic        ram_we,
 	output logic        ram_cs,
 
-  // Flash
-  output logic        fls_cs,
-  output logic        fls_clk,
-  inout logic         fls_di_io0,
-  inout logic         fls_do_io1,
-  inout logic         fls_holdn_io3,
-  inout logic         fls_wpn_io2,
+	// Flash
+	output logic fls_cs,
+	output logic fls_clk,
+	inout logic  fls_di_io0,
+	inout logic  fls_do_io1,
+	inout logic  fls_holdn_io3,
+	inout logic  fls_wpn_io2,
 
-  // JTAG
-  input  logic        jtag_tck,
-  output logic        jtag_tdo,
-  input  logic        jtag_tdi,
-  input  logic        jtag_tms,
+	// JTAG (note: you need to pull down JTAGEN in order to use these pins as IO pins in your design)
+	input  logic jtag_tck,
+	output logic jtag_tdo,
+	input  logic jtag_tdi,
+	input  logic jtag_tms,
 
-  // UART
-  input  logic        uart_txd,
-  output logic        uart_rxd,
-  input  logic        uart_rts,
-  output logic        uart_cts,
-  input  logic        uart_dtr,
-  output logic        uart_dsr
+	// UART
+	input  logic uart_txd,
+	output logic uart_rxd,
+	input  logic uart_rts,
+	output logic uart_cts,
+	input  logic uart_dtr,
+	output logic uart_dsr
 );
 
 // This is the top module, enter your design here
